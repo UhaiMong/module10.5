@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 300px;height: auto; padding: 8px; border: 2px solid grey;">
+        <h2>name: {{name}}</h2>
+        <h2>age: {{age}}</h2>
+        <h2>completed courses: {{courses}}</h2>
+    </div>
+    <h1>Length Filter</h1>
+    <h6>I have: {{pet | length}} animals</h6>
+    <h5>They are {{pet}}</h5>
+    <hr>
+    <h1>Join Filter</h1>
+    <h3>input:</h3>
+    <h5>{{pet}}</h5>
+    <h3>output:</h3>
+    <h5>{{ pet | join:" , " }}</h5>
+    <hr>
+    <h1>Date Filter</h1>
+    <h3>input:</h3>
+    <h5>{{date}}</h5>
+    <h3>output:</h3>
+    <h5>Today: {{date | date:"D d M Y"}}</h5>
+    <hr>
+    <h1>Default Filter</h1>
+    <h5> {{default |default:"Empty"}} </h5>
+    <h5> {{default2 |default:"Nothing here"}} </h5>
+    <hr>
+    <h1>Add Filter</h1>
+    <h3>input:</h3>
+    <h5>{{val1}}</h5>
+    <h3>output:</h3>
+    <h5>{{val1 | add:"5"}}</h5>
+    <h3>input:</h3>
+    <h5>{{arr1}} and {{arr2}}</h5>
+    <h3>output:</h3>
+    <h5>{{arr1 | add:arr2}}</h5>
+    <hr>
+    <h1>Capfirst filter</h1>
+    <h3>input:</h3>
+    <h5>{{capfirst}}</h5>
+    <h3>output:</h3>
+    <h5>{{capfirst | capfirst}}</h5>
+    <hr>
+    <h1>Cut Filter</h1>
+    <h3>input:</h3>
+    <h5>{{cut}}</h5>
+    <h3>output:</h3>
+    <h5>{{cut | cut:" "}}</h5>
+    <hr>
+    <h1>Dictsort Filter</h1>
+    <h3>input:</h3>
+    <h5>{{courses}}</h5>
+    <h3>output:</h3>
+    <h5>After sorting by duration: {{courses | dictsort:"duration"}} </h5>
+    <hr>
+    <h1>First Filter</h1>
+    <h3>input:</h3>
+    <h5>{{arr1}}</h5>
+    <h3>output:</h3>
+    <h5>{{arr1 | first}}</h5>
+    <hr>
+    <h1>Line numbers Filter</h1>
+    <h3>input:</h3>
+    <h5>{{courses}}</h5>
+    <h3>output:</h3>
+    {% for i in courses %}
+    <h5>{{i.title | linenumbers}}</h5>
+    {%endfor%}
+    <hr>
+    <h1>Lower and Upper Filter</h1>
+    <h3>input:</h3>
+    <h5>{{upper}} lowercase</h5>
+    <h3>output:</h3>
+    <h5>{{upper | lower}} lowercase</h5>
+    <h3>input:</h3>
+    <h5>{{lower}} uppercase</h5>
+    <h3>output:</h3>
+    <h5>{{lower|upper}} UPPERCASE</h5>
+    <hr>
+    <h1>Title Filter</h1>
+    <h3>input:</h3>
+    <h5>{{cut}}</h5>
+    <h3>output:</h3>
+    <h5>{{cut | title}}</h5>
+    <hr>
+    <h1>Random Filter</h1>
+    <h3>input:</h3>
+    <h5>{{pet}}</h5>
+    <h3>output:</h3>
+    <h5>{{pet | random}}</h5>
+    <hr>
+    <h1>Slice Filter</h1>
+    <h3>input:</h3>
+    <h5>{{pet}}</h5>
+    <h3>output:</h3>
+    <h5>{{pet | slice:":2"}}</h5>
+    <hr>
+    <h1>Time Filter</h1>
+    <h3>input:</h3>
+    <h5>{{date}}</h5>
+    <h3>output:</h3>
+    <h5>{{date | time:"H:i"}}</h5>
+    <hr>
+    <h1>Truncatechars and Truncatewords Filter</h1>
+    <h3>input:</h3>
+    <h5>{{cut}}</h5>
+    <h3>output:</h3>
+    <h5>{{cut | truncatechars:10}}</h5>
+    <h3>input:</h3>
+    <h5>{{cut}}</h5>
+    <h3>output:</h3>
+    <h5>{{cut | truncatewords:3}}</h5>
+    <hr>
+    <h1>Wordcount Filter</h1>
+    <h3>input:</h3>
+    <h5>{{cut}}</h5>
+    <h3>output:</h3>
+    <h5>{{cut | wordcount}}</h5>
+    <hr>
+    <h1>Make_list Filter</h1>
+    <h3>input:</h3>
+    <h5>Programming</h5>
+    <h3>output:</h3>
+    <h5>{{'Programming' | make_list}}</h5>
+
+
+</body>
+
+</html>
